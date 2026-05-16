@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
+import Image from 'next/image';
 
 const reviews = [
   {
@@ -37,7 +39,7 @@ const Reviews = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {reviews.map((review, index) => (
           <motion.div
-            key={index}
+            key={review.name}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -49,8 +51,13 @@ const Reviews = () => {
             </div>
             
             <div className="flex items-center space-x-4 mb-8">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-[#7A3E9D]">
-                <img src={review.image} alt={review.name} className="w-full h-full object-cover" />
+              <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-[#7A3E9D] relative">
+                <Image 
+                  src={review.image} 
+                  alt={review.name} 
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h4 className="font-black text-[#3B1E4D]">{review.name}</h4>

@@ -1,16 +1,21 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Play, ArrowRight, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
     <section className="relative h-[700px] lg:h-[850px] overflow-hidden flex items-center bg-[#1A0B2E]">
       {/* Background Image with Deep Theme-Purple Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <Image 
           src="https://images.unsplash.com/photo-1586015555751-63bb77f4322a?q=80&w=2000&auto=format&fit=crop" 
           alt="Pharmacy Background" 
-          className="w-full h-full object-cover opacity-30 scale-105"
+          fill
+          className="object-cover opacity-30 scale-105"
+          priority
+          sizes="100vw"
         />
         {/* Theme-Consistent Dark Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#1A0B2E] via-[#1A0B2E]/95 to-transparent"></div>
@@ -39,9 +44,9 @@ const Hero = () => {
           </h1>
           
           <p className="text-gray-400 text-sm lg:text-base mb-12 max-w-xl leading-relaxed font-medium">
-            Experience premium pharmaceutical services with KamalPharma. 
-            From expert consultations to rapid home delivery, we provide 
-            comprehensive healthcare solutions tailored to your needs.
+            Your trusted partner in health and wellness in Govind Mitra, Patna. 
+            From expert pharmaceutical care to fast and reliable delivery, 
+            we bring healthcare excellence directly to your doorstep.
           </p>
           
           <div className="flex flex-wrap gap-6 items-center">
@@ -57,8 +62,14 @@ const Hero = () => {
           <div className="mt-16 flex items-center space-x-8">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-[#1A0B2E] overflow-hidden">
-                  <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-[#1A0B2E] overflow-hidden relative">
+                  <Image 
+                    src={`https://i.pravatar.cc/100?img=${i+10}`} 
+                    alt="User" 
+                    fill
+                    className="object-cover"
+                    sizes="40px"
+                  />
                 </div>
               ))}
             </div>

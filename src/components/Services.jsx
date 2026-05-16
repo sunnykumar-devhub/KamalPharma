@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
-import { Syringe, ClipboardList, Package, Activity, HeartPulse, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Syringe, ClipboardList, Package, ArrowRight, HandHeart } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const services = [
   {
@@ -28,7 +30,10 @@ const ServicesList = () => {
     <section id="services" className="section-padding bg-gray-50">
       <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
         <div>
-          <p className="text-[#7A3E9D] font-black uppercase tracking-widest text-[10px] mb-4">Our Expertise</p>
+          <div className="flex items-center space-x-2 mb-4">
+             <HandHeart className="text-[#7A3E9D]" size={20} />
+             <p className="text-[#7A3E9D] font-black uppercase tracking-widest text-[10px]">Our Expertise</p>
+          </div>
           <h2 className="text-4xl lg:text-6xl font-black text-[#3B1E4D]">What We Offer</h2>
         </div>
         <button className="bg-gradient-to-r from-[#7A3E9D] to-[#3B1E4D] text-white px-10 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-xl">
@@ -39,7 +44,7 @@ const ServicesList = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {services.map((service, index) => (
           <motion.div
-            key={index}
+            key={service.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,11 +84,15 @@ const ServicesList = () => {
           <button className="btn-primary">Shop Collection</button>
         </div>
         <div className="flex-1 relative z-10 w-full lg:w-auto">
-          <img 
-            src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop" 
-            alt="Supplements" 
-            className="rounded-[3rem] shadow-2xl border-4 border-white/10"
-          />
+          <div className="relative h-[300px] lg:h-[400px] w-full">
+            <Image 
+              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop" 
+              alt="Supplements" 
+              fill
+              className="rounded-[3rem] shadow-2xl border-4 border-white/10 object-cover"
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          </div>
         </div>
       </div>
     </section>

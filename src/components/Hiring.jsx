@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Heart, CheckCircle } from 'lucide-react';
+import { Briefcase, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const Hiring = () => {
   return (
@@ -29,8 +31,8 @@ const Hiring = () => {
               'Competitive Salary & Benefits',
               'Continuous Medical Training',
               'Impact Local Community Health'
-            ].map((item, i) => (
-              <div key={i} className="flex items-center space-x-4">
+            ].map((item) => (
+              <div key={item} className="flex items-center space-x-4">
                 <CheckCircle className="text-[#7A3E9D]" size={20} />
                 <span className="text-gray-300 font-bold text-xs uppercase tracking-widest">{item}</span>
               </div>
@@ -47,12 +49,14 @@ const Hiring = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="rounded-[4rem] overflow-hidden shadow-2xl h-[600px] border border-white/10"
+            className="rounded-[4rem] overflow-hidden shadow-2xl h-[400px] lg:h-[600px] border border-white/10 relative"
           >
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1000&auto=format&fit=crop" 
               alt="Hiring Pharmacists" 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </motion.div>
           

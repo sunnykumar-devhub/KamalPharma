@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Search, Filter, Pill, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
