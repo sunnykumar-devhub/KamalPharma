@@ -1,14 +1,17 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const CTA = () => {
   return (
     <section className="relative h-[500px] overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0">
-        <img 
+        <Image 
           src="https://images.unsplash.com/photo-1586015555751-63bb77f4322a?q=80&w=2000&auto=format&fit=crop" 
           alt="Complete Medicine" 
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-primary-dark/90"></div>
       </div>

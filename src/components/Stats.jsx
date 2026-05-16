@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Pill, UserPlus, Stethoscope } from 'lucide-react';
@@ -32,7 +33,7 @@ const Stats = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-16">
           {stats.map((stat, index) => (
             <motion.div
-              key={index}
+              key={stat.label}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

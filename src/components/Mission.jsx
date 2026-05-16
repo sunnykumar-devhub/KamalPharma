@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users } from 'lucide-react';
+import Image from 'next/image';
 
 const Mission = () => {
   return (
@@ -59,20 +61,24 @@ const Mission = () => {
             className="relative"
           >
             {/* Main Image */}
-            <div className="rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] h-[500px]">
-              <img 
+            <div className="rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] h-[400px] lg:h-[500px] relative w-full">
+              <Image 
                 src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1000&auto=format&fit=crop" 
                 alt="Pharmacist Work" 
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
             {/* Overlapping Image - Fixed Placeholder */}
-            <div className="absolute -bottom-10 -right-10 w-72 h-80 rounded-[2.5rem] overflow-hidden border-[12px] border-white shadow-2xl z-20">
-              <img 
+            <div className="absolute -bottom-10 -right-10 w-56 h-64 lg:w-72 lg:h-80 rounded-[2.5rem] overflow-hidden border-[12px] border-white shadow-2xl z-20">
+              <Image 
                 src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=1000&auto=format&fit=crop" 
                 alt="Pharmacy Consultation" 
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 224px, 288px"
               />
             </div>
 
