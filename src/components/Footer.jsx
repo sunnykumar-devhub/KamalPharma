@@ -8,7 +8,7 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Our Services', path: '/services' },
-    { name: 'Hiring', path: '/contact' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -94,9 +94,9 @@ const Footer = () => {
             Join our elite healthcare community for the latest medical updates.
           </p>
           <div className="relative group">
-            <input 
-              type="email" 
-              placeholder="Your Email Address" 
+            <input
+              type="email"
+              placeholder="Your Email Address"
               className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-6 pr-14 focus:border-[#7A3E9D] focus:ring-1 focus:ring-[#7A3E9D] outline-none transition-all text-xs font-medium"
             />
             <button className="absolute right-2 top-2 bottom-2 w-10 bg-[#7A3E9D] rounded-full flex items-center justify-center hover:bg-[#3B1E4D] transition-all shadow-lg">

@@ -12,18 +12,15 @@ const Logo = ({ variant = 'full', className = '' }) => {
       <motion.div 
         whileHover={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 0.6, repeat: Infinity }}
-        style={{ backgroundColor: isFooter ? 'rgba(255, 255, 255, 0.1)' : '#7A3E9D' }}
-        className={`
-          relative flex items-center justify-center rounded-xl transition-all duration-300 overflow-hidden
-          ${isFooter ? 'w-10 h-10' : 'w-11 h-11 shadow-lg shadow-primary/20'}
-        `}
+        style={{ backgroundColor: isFooter ? 'rgba(255, 255, 255, 0.1)' : 'rgba(122, 62, 157, 0.1)' }}
+        className="relative flex items-center justify-center rounded-xl transition-all duration-300 overflow-hidden w-10 h-10"
       >
         <Image 
           src="/favicon.svg" 
           alt="Kamal Pharma Logo" 
-          width={isFooter ? 30 : 34}
-          height={isFooter ? 30 : 34}
-          className="object-contain"
+          width={30}
+          height={30}
+          className={`object-contain ${isFooter ? 'brightness-0 invert' : ''}`}
         />
       </motion.div>
 
