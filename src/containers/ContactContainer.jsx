@@ -6,15 +6,16 @@ import { motion } from 'framer-motion';
 const ContactContainer = () => {
   return (
     <div className="pt-20">
-      <div className="bg-[#F3E8FF] py-24 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[#7A3E9D] opacity-5"></div>
+      {/* Hero Section */}
+      <div className="bg-[#1A0B2E] py-24 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[#7A3E9D] opacity-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="relative z-10"
         >
-          <h1 className="text-5xl lg:text-7xl font-black text-[#3B1E4D] mb-6">Contact Us</h1>
-          <p className="text-[#7A3E9D] font-bold uppercase tracking-[0.4em] text-xs">Professional Care at Your Fingertips</p>
+          <h1 className="text-5xl lg:text-7xl font-black text-white mb-6">Contact Us</h1>
+          <p className="text-[#F3E8FF] font-bold uppercase tracking-[0.4em] text-xs">Professional Care at Your Fingertips</p>
         </motion.div>
       </div>
 
