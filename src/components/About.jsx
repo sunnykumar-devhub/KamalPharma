@@ -34,7 +34,7 @@ const About = () => {
             className="absolute -bottom-10 -left-10 z-20 w-48 h-48 lg:w-64 lg:h-64 border-[15px] border-white rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image 
-              src="https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?q=80&w=1000&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1000&auto=format&fit=crop" 
               alt="Hand with Pills" 
               fill
               className="object-cover"
