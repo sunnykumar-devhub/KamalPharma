@@ -27,8 +27,8 @@ const Logo = ({ variant = 'full', className = '' }) => {
       {/* Text Branding - Hidden on mobile for Navbar variant */}
       {(variant === 'full' || variant === 'footer') && (
         <div className={`flex flex-col leading-none ${variant === 'full' ? 'hidden sm:flex' : 'flex'}`}>
-          <span className="font-black tracking-tighter transition-colors text-2xl" style={{ color: isFooter ? '#FFFFFF' : '#7A3E9D' }}>
-            KamalPharma
+          <span className="font-black tracking-tighter transition-colors text-2xl" style={{ color: isFooter ? '#FFFFFF' : '#3B1E4D' }}>
+            Kamal<span style={{ color: '#7A3E9D' }}>Pharma</span>
           </span>
           <span className={`
             text-[9px] font-bold uppercase tracking-[0.2em] mt-1
