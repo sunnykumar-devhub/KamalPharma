@@ -18,8 +18,8 @@ const About = () => {
           >
             <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl h-[400px] lg:h-[600px]">
               <Image 
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1000&auto=format&fit=crop" 
-                alt="Pharmacy" 
+                src="/storefront.jpg" 
+                alt="Kamal Pharma Storefront" 
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
